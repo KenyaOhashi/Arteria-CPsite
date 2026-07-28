@@ -1,0 +1,70 @@
+.arteria-pulse-line {
+  position: fixed;
+  z-index: 25;
+  top: 0;
+  right: max(1vw, calc((100vw - 1440px) / 2));
+  width: 96px;
+  height: 100vh;
+  height: 100dvh;
+  pointer-events: none;
+  opacity: 0.76;
+}
+
+.arteria-pulse-line svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.arteria-pulse-line__track,
+.arteria-pulse-line__active {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.arteria-pulse-line__track {
+  stroke: rgb(122 20 35 / 22%);
+  stroke-width: 1.15;
+}
+
+.arteria-pulse-line__active {
+  stroke: url(#standalone-artery-gradient);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+  filter: url(#standalone-pulse-glow);
+}
+
+.arteria-pulse-line__node {
+  fill: #a51f34;
+  filter: url(#standalone-pulse-glow);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: arteria-pulse-beat 1.8s ease-in-out infinite;
+}
+
+@keyframes arteria-pulse-beat {
+  50% { opacity: 1; transform: scale(1.7); }
+}
+
+@media (max-width: 1023px) {
+  .arteria-pulse-line {
+    right: -6px;
+    width: 70px;
+    opacity: 0.58;
+  }
+}
+
+@media (max-width: 767px) {
+  .arteria-pulse-line {
+    right: -12px;
+    width: 54px;
+    opacity: 0.48;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arteria-pulse-line__active { filter: none; }
+  .arteria-pulse-line__node { animation: none; filter: none; }
+}

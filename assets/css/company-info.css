@@ -1,0 +1,31 @@
+.company-table a,
+.privacy a {
+  color: var(--deep);
+  text-decoration: underline;
+  text-decoration-color: #4169e159;
+  text-underline-offset: .25em;
+}
+
+.business-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: business;
+}
+
+.business-list li {
+  position: relative;
+  padding-left: 3.1em;
+  counter-increment: business;
+}
+
+.business-list li::before {
+  position: absolute;
+  left: 0;
+  color: var(--deep);
+  content: "(" counter(business) ")";
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}

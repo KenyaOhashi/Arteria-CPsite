@@ -1,0 +1,108 @@
+.standalone-mobile-menu {
+  position: relative;
+  display: none;
+}
+
+.standalone-mobile-menu summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid #d7dff5;
+  border-radius: 8px;
+  background: #fffffff2;
+  color: #2747b5;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  list-style: none;
+}
+
+.standalone-mobile-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.standalone-mobile-menu summary::before {
+  width: 15px;
+  height: 10px;
+  margin-right: 7px;
+  border-top: 1.5px solid currentcolor;
+  border-bottom: 1.5px solid currentcolor;
+  content: "";
+  transition: transform 180ms ease;
+}
+
+.standalone-mobile-menu[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.standalone-mobile-menu nav {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  display: grid;
+  min-width: min(82vw, 290px);
+  max-height: calc(100vh - 86px);
+  overflow-y: auto;
+  gap: 0;
+  padding: 12px;
+  border: 1px solid #d7dff5;
+  border-radius: 10px;
+  background: #fbfcfff7;
+  box-shadow: 0 24px 60px #1118271f;
+  backdrop-filter: blur(18px);
+}
+
+.standalone-mobile-menu nav a {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #d7dff5;
+  font-size: .82rem;
+}
+
+.standalone-mobile-menu nav a:last-child {
+  border-bottom: 0;
+  color: #2747b5;
+  font-weight: 400;
+}
+
+@media (max-width: 1023px) {
+  html.standalone-mobile-ready header {
+    grid-template-columns: 1fr auto;
+  }
+
+  html.standalone-mobile-ready header > nav,
+  html.standalone-mobile-ready header > .contact {
+    display: none;
+  }
+
+  html.standalone-mobile-ready .standalone-mobile-menu {
+    display: block;
+  }
+
+  html.standalone-mobile-ready .standalone-mobile-menu nav {
+    display: grid;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .people-orbit {
+    animation-duration: 46s;
+    animation-play-state: running;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .standalone-mobile-menu summary::before {
+    transition: none;
+  }
+
+  .people-orbit {
+    animation: none;
+  }
+}
