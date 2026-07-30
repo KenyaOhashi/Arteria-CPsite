@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 return [
-  "recipient" => "k.ohashi@freemova.jp",
+  "recipient" => "fm0003@freemova.jp",
   "from_email" => "no-reply@example.com",
   "site_name" => "株式会社Arteria",
   "google_sheets_webhook_url" =>
