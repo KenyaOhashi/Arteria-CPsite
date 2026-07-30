@@ -2,8 +2,12 @@ function initializeMobileMenu() {
   const header = document.querySelector("body > header");
   if (!header || header.querySelector(".standalone-mobile-menu")) return;
 
-  const desktopNavigation = Array.from(header.children).find((element) => element.tagName === "NAV");
-  const contactLink = Array.from(header.children).find((element) => element.classList.contains("contact"));
+  const desktopNavigation = Array.from(header.children).find(
+    (element) => element.tagName === "NAV",
+  );
+  const contactLink = Array.from(header.children).find((element) =>
+    element.classList.contains("contact"),
+  );
   if (!desktopNavigation) return;
 
   const details = document.createElement("details");

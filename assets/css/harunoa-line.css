@@ -6,8 +6,7 @@
 .line-contact-section {
   background:
     radial-gradient(circle at 12% 86%, rgb(95 159 134 / 15%), transparent 24rem),
-    radial-gradient(circle at 90% 12%, rgb(233 144 181 / 13%), transparent 22rem),
-    #fff !important;
+    radial-gradient(circle at 90% 12%, rgb(233 144 181 / 13%), transparent 22rem), #fff !important;
 }
 
 .line-contact--detail {

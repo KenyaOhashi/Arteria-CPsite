@@ -1,5 +1,13 @@
 (() => {
-  const pathData = "M124 0 C118 120 140 190 122 300 C106 400 130 455 122 520 L122 610 L98 630 L146 650 L116 675 L124 720 C134 840 105 930 123 1040 C141 1160 108 1280 122 1390 C126 1450 120 1510 118 1600";
+  const pathData = [
+    "M124 0",
+    "C118 120 140 190 122 300",
+    "C106 400 130 455 122 520",
+    "L122 610 L98 630 L146 650 L116 675 L124 720",
+    "C134 840 105 930 123 1040",
+    "C141 1160 108 1280 122 1390",
+    "C126 1450 120 1510 118 1600",
+  ].join(" ");
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   const wrapper = document.createElement("div");
@@ -33,7 +41,9 @@
   const render = () => {
     frame = 0;
     const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
-    const progress = reducedMotion.matches ? 1 : Math.min(1, Math.max(0, window.scrollY / maxScroll));
+    const progress = reducedMotion.matches
+      ? 1
+      : Math.min(1, Math.max(0, window.scrollY / maxScroll));
     active.style.strokeDasharray = `${progress} 1`;
     const point = active.getPointAtLength(pathLength * progress);
     node.setAttribute("cx", point.x.toFixed(2));

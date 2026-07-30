@@ -1,0 +1,145 @@
+/*
+ * Shared typography and narrow-screen safeguards.
+ * Load this file after each page-specific stylesheet.
+ */
+
+html {
+  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 0;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+:where(
+  main,
+  section,
+  article,
+  aside,
+  header,
+  footer,
+  nav,
+  div,
+  form,
+  fieldset,
+  ul,
+  ol,
+  li,
+  dl,
+  dd,
+  figure
+) {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  max-width: 100%;
+  letter-spacing: 0.015em;
+  line-break: strict;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+p,
+li,
+dt,
+dd,
+label,
+figcaption {
+  line-break: strict;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+a,
+code {
+  overflow-wrap: anywhere;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+table,
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font: inherit;
+}
+
+@media (max-width: 767px) {
+  .shell {
+    padding-inline: clamp(18px, 5vw, 24px);
+  }
+
+  .flow-head {
+    flex-wrap: wrap;
+    gap: 8px 18px;
+  }
+
+  .btn,
+  .form-submit {
+    white-space: normal;
+  }
+
+  .line-contact--compact {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  .line-contact__qr {
+    width: 64px !important;
+    height: 64px !important;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero h1 {
+    font-size: clamp(2.25rem, 10.5vw, 3.75rem);
+  }
+
+  .nowrap {
+    white-space: normal;
+  }
+
+  .service-copy,
+  .contact-form {
+    padding-inline: 24px;
+  }
+
+  .line-contact--compact {
+    grid-template-columns: 1fr;
+  }
+}

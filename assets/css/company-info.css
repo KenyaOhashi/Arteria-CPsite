@@ -3,7 +3,7 @@
   color: var(--deep);
   text-decoration: underline;
   text-decoration-color: #4169e159;
-  text-underline-offset: .25em;
+  text-underline-offset: 0.25em;
 }
 
 .business-list {

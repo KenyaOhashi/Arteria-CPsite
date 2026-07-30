@@ -45,7 +45,10 @@
 }
 
 @keyframes arteria-pulse-beat {
-  50% { opacity: 1; transform: scale(1.7); }
+  50% {
+    opacity: 1;
+    transform: scale(1.7);
+  }
 }
 
 @media (max-width: 1023px) {
@@ -65,6 +68,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .arteria-pulse-line__active { filter: none; }
-  .arteria-pulse-line__node { animation: none; filter: none; }
+  .arteria-pulse-line__active {
+    filter: none;
+  }
+  .arteria-pulse-line__node {
+    animation: none;
+    filter: none;
+  }
 }

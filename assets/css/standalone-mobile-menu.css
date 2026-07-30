@@ -16,8 +16,8 @@
   color: #2747b5;
   cursor: pointer;
   font-family: "Work Sans", sans-serif;
-  font-size: .7rem;
-  letter-spacing: .08em;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
   list-style: none;
 }
 
@@ -62,7 +62,7 @@
   min-height: 48px;
   padding: 10px 12px;
   border-bottom: 1px solid #d7dff5;
-  font-size: .82rem;
+  font-size: 0.82rem;
 }
 
 .standalone-mobile-menu nav a:last-child {

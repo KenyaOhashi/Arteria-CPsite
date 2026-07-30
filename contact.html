@@ -1,67 +1,176 @@
 <!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="株式会社Arteriaへのご相談・お問い合わせ。">
-  <title>お問い合わせ｜株式会社Arteria</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;600&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/subpage.css">
-  <link rel="stylesheet" href="assets/css/contact.css">
-  <link rel="stylesheet" href="assets/css/standalone-mobile-menu.css">
-  <link rel="stylesheet" href="assets/css/standalone-pulse-line.css">
-  <script src="assets/js/standalone-mobile-menu.js" defer></script>
-  <script src="assets/js/standalone-pulse-line.js" defer></script>
-</head>
-<body>
-  <a class="skip" href="#main">本文へ移動</a>
-  <header>
-    <a class="brand" href="index.html"><span>Arteria</span><img src="assets/images/arteria-logo-header-20260722.png" alt=""></a>
-    <nav aria-label="主要ナビゲーション"><a href="philosophy.html">企業理念</a><a href="company.html">会社概要</a><a href="message.html">代表メッセージ</a><a href="news.html">お知らせ</a><a href="service.html">サービス</a><a href="recruit.html">採用</a><a href="privacy.html">プライバシー</a><a href="sns.html">SNS</a></nav>
-    <a class="contact" aria-current="page" href="contact.html">お問い合わせ</a>
-  </header>
-  <main id="main">
-    <section class="hero"><div class="shell hero-inner"><p class="eyebrow">CONTACT</p><h1>お問い合わせ</h1><p class="lead">事業・サービス・採用・協業などについて、こちらからお気軽にご相談ください。</p></div></section>
-    <section class="block">
-      <div class="shell contact-page">
-        <aside class="contact-intro">
-          <p class="eyebrow">GET IN TOUCH</p>
-          <h2>新しい巡りを、<br>ここから始める。</h2>
-          <p>必要事項をご入力ください。内容を確認のうえ、担当者よりご連絡します。</p>
-          <dl class="contact-guide">
-            <div><dt>返信について</dt><dd>原則として3営業日以内を目安にご連絡します。</dd></div>
-            <div><dt>お急ぎの場合</dt><dd><a href="mailto:k.ohashi@freemova.jp">k.ohashi@freemova.jp</a></dd></div>
-          </dl>
-        </aside>
-        <form class="contact-form" action="php/contact.php" method="post">
-          <div class="contact-form__row">
-            <div class="form-field"><label for="name">お名前 <span>必須</span></label><input id="name" name="name" type="text" autocomplete="name" maxlength="80" required></div>
-            <div class="form-field"><label for="organization">会社名・所属</label><input id="organization" name="organization" type="text" autocomplete="organization" maxlength="120"></div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="株式会社Arteriaへのご相談・お問い合わせ。" />
+    <title>お問い合わせ｜株式会社Arteria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@300;400;600&family=Work+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/subpage.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <link rel="stylesheet" href="assets/css/standalone-mobile-menu.css" />
+    <link rel="stylesheet" href="assets/css/standalone-pulse-line.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <script src="assets/js/standalone-mobile-menu.js" defer></script>
+    <script src="assets/js/standalone-pulse-line.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">本文へ移動</a>
+    <header>
+      <a class="brand" href="index.html"
+        ><span>Arteria</span><img src="assets/images/arteria-logo-header-20260722.png" alt=""
+      /></a>
+      <nav aria-label="主要ナビゲーション">
+        <a href="philosophy.html">企業理念</a><a href="company.html">会社概要</a
+        ><a href="message.html">代表メッセージ</a><a href="news.html">お知らせ</a
+        ><a href="service.html">サービス</a><a href="recruit.html">採用</a
+        ><a href="privacy.html">プライバシー</a><a href="sns.html">SNS</a>
+      </nav>
+      <a class="contact" aria-current="page" href="contact.html">お問い合わせ</a>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div class="shell hero-inner">
+          <p class="eyebrow">CONTACT</p>
+          <h1>お問い合わせ</h1>
+          <p class="lead">
+            事業・サービス・採用・協業などについて、こちらからお気軽にご相談ください。
+          </p>
+        </div>
+      </section>
+      <section class="block">
+        <div class="shell contact-page">
+          <aside class="contact-intro">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>新しい巡りを、<br />ここから始める。</h2>
+            <p>必要事項をご入力ください。内容を確認のうえ、担当者よりご連絡します。</p>
+            <dl class="contact-guide">
+              <div>
+                <dt>返信について</dt>
+                <dd>原則として3営業日以内を目安にご連絡します。</dd>
+              </div>
+              <div>
+                <dt>お急ぎの場合</dt>
+                <dd><a href="mailto:k.ohashi@freemova.jp">k.ohashi@freemova.jp</a></dd>
+              </div>
+            </dl>
+          </aside>
+          <form class="contact-form" action="php/contact.php" method="post">
+            <div class="contact-form__row">
+              <div class="form-field">
+                <label for="name">お名前 <span>必須</span></label
+                ><input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  maxlength="80"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="organization">会社名・所属</label
+                ><input
+                  id="organization"
+                  name="organization"
+                  type="text"
+                  autocomplete="organization"
+                  maxlength="120"
+                />
+              </div>
+            </div>
+            <div class="contact-form__row">
+              <div class="form-field">
+                <label for="email">メールアドレス <span>必須</span></label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="160"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="phone">電話番号</label
+                ><input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  inputmode="tel"
+                  maxlength="30"
+                />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="category">お問い合わせ種別 <span>必須</span></label
+              ><select id="category" name="category" required>
+                <option value="">選択してください</option>
+                <option value="サービスについて">サービスについて</option>
+                <option value="協業・パートナーについて">協業・パートナーについて</option>
+                <option value="採用について">採用について</option>
+                <option value="取材について">取材について</option>
+                <option value="その他">その他</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">お問い合わせ内容 <span>必須</span></label
+              ><textarea id="message" name="message" rows="8" maxlength="3000" required></textarea>
+            </div>
+            <div class="form-trap" aria-hidden="true">
+              <label for="website">Webサイト</label
+              ><input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+            <input name="source_page" type="hidden" value="contact.html" />
+            <label class="form-consent"
+              ><input name="privacy" type="checkbox" value="同意する" required /><span
+                ><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a
+                >を確認し、個人情報の取扱いに同意します。</span
+              ></label
+            >
+            <button class="form-submit" type="submit">
+              <span>内容を送信する</span><span aria-hidden="true">→</span>
+            </button>
+            <p class="form-note">
+              フォーム送信は、PHPとGoogleスプレッドシート連携の初期設定後に利用できます。
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="shell footer-grid">
+        <div>
+          <div class="footer-brand-row">
+            <div class="footer-brand en">Arteria</div>
+            <img
+              class="footer-logo"
+              src="assets/images/arteria-logo-header-20260722.png"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
-          <div class="contact-form__row">
-            <div class="form-field"><label for="email">メールアドレス <span>必須</span></label><input id="email" name="email" type="email" autocomplete="email" maxlength="160" required></div>
-            <div class="form-field"><label for="phone">電話番号</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30"></div>
-          </div>
-          <div class="form-field"><label for="category">お問い合わせ種別 <span>必須</span></label><select id="category" name="category" required><option value="">選択してください</option><option value="サービスについて">サービスについて</option><option value="協業・パートナーについて">協業・パートナーについて</option><option value="採用について">採用について</option><option value="取材について">取材について</option><option value="その他">その他</option></select></div>
-          <div class="form-field"><label for="message">お問い合わせ内容 <span>必須</span></label><textarea id="message" name="message" rows="8" maxlength="3000" required></textarea></div>
-          <div class="form-trap" aria-hidden="true"><label for="website">Webサイト</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-          <input name="source_page" type="hidden" value="contact.html">
-          <label class="form-consent"><input name="privacy" type="checkbox" value="同意する" required><span><a href="privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。</span></label>
-          <button class="form-submit" type="submit"><span>内容を送信する</span><span aria-hidden="true">→</span></button>
-          <p class="form-note">フォーム送信は、PHPとGoogleスプレッドシート連携の初期設定後に利用できます。</p>
-        </form>
+          <p>学びと仕事と機会をめぐらせる、<br />社会の動脈になる。</p>
+        </div>
+        <div class="footer-nav">
+          <a href="philosophy.html">企業理念</a><a href="company.html">会社概要</a
+          ><a href="message.html">代表メッセージ</a><a href="news.html">お知らせ</a
+          ><a href="service.html">サービス</a><a href="recruit.html">採用</a
+          ><a href="privacy.html">プライバシーポリシー</a><a href="sns.html">SNS</a
+          ><a href="contact.html">お問い合わせ</a>
+        </div>
+        <div>
+          <strong>株式会社Arteria</strong>
+          <p>東京都渋谷区神山町40-2</p>
+        </div>
       </div>
-    </section>
-  </main>
-  <footer>
-    <div class="shell footer-grid">
-      <div><div class="footer-brand-row"><div class="footer-brand en">Arteria</div><img class="footer-logo" src="assets/images/arteria-logo-header-20260722.png" alt="" aria-hidden="true"></div><p>学びと仕事と機会をめぐらせる、<br>社会の動脈になる。</p></div>
-      <div class="footer-nav"><a href="philosophy.html">企業理念</a><a href="company.html">会社概要</a><a href="message.html">代表メッセージ</a><a href="news.html">お知らせ</a><a href="service.html">サービス</a><a href="recruit.html">採用</a><a href="privacy.html">プライバシーポリシー</a><a href="sns.html">SNS</a><a href="contact.html">お問い合わせ</a></div>
-      <div><strong>株式会社Arteria</strong><p>東京都渋谷区神山町40-2</p></div>
-    </div>
-    <div class="copyright">© Arteria Co., Ltd. All Rights Reserved.</div>
-  </footer>
-</body>
+      <div class="copyright">© Arteria Co., Ltd. All Rights Reserved.</div>
+    </footer>
+  </body>
 </html>
