@@ -1,5 +1,15 @@
-const SPREADSHEET_ID = "1suujeoF7bmIHdJF7s8pLMuYTt9liGk6IfILKDdkM9t0";
+const SPREADSHEET_ID = "1iAaSAr49rceMHeS7lPtxGs8SeFtjmyg7W6vrGD2GY9s";
 const SHEET_NAME = "お問い合わせ管理";
+
+function doGet() {
+  try {
+    getTargetSheet();
+    return jsonResponse({ success: true });
+  } catch (error) {
+    console.error(error);
+    return jsonResponse({ success: false, message: "Internal error" });
+  }
+}
 
 function doPost(e) {
   try {
@@ -10,6 +20,11 @@ function doPost(e) {
       return jsonResponse({ success: false, message: "Unauthorized" });
     }
 
+    const sheet = getTargetSheet();
+    if (payload.healthCheck === true) {
+      return jsonResponse({ success: true });
+    }
+
     const name = clean(payload.name, 80);
     const email = clean(payload.email, 160);
     const phone = clean(payload.phone, 30);
@@ -18,29 +33,35 @@ function doPost(e) {
     const message = clean(payload.message, 3000);
     const privacy = clean(payload.privacy, 20);
     const sourcePage = clean(payload.sourcePage, 500);
-    if (!name || !email || !category || !message || privacy !== "同意する") {
+    if (!name || !email || !phone || !category || !message || privacy !== "同意する") {
       return jsonResponse({ success: false, message: "Invalid payload" });
     }
 
-    const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME);
-    if (!sheet) throw new Error("Sheet not found");
     const contactId = Utilities.getUuid();
-    sheet.appendRow([
-      new Date(),
-      contactId,
-      "未対応",
-      category,
-      name,
-      email,
-      phone,
-      organization,
-      message,
-      privacy,
-      "",
-      "",
-      "",
-      sourcePage,
-    ]);
+    const lock = LockService.getScriptLock();
+    if (!lock.tryLock(10000)) {
+      throw new Error("Could not acquire script lock");
+    }
+    try {
+      sheet.appendRow([
+        new Date(),
+        contactId,
+        "未対応",
+        safeCell(category),
+        safeCell(name),
+        safeCell(email),
+        safeCell(phone),
+        safeCell(organization),
+        safeCell(message),
+        privacy,
+        "",
+        "",
+        "",
+        safeCell(sourcePage),
+      ]);
+    } finally {
+      lock.releaseLock();
+    }
     return jsonResponse({ success: true, id: contactId });
   } catch (error) {
     console.error(error);
@@ -52,6 +73,18 @@ function clean(value, maxLength) {
   return String(value || "")
     .trim()
     .slice(0, maxLength);
+}
+
+function getTargetSheet() {
+  const sheet = SpreadsheetApp.openById(SPREADSHEET_ID).getSheetByName(SHEET_NAME);
+  if (!sheet) {
+    throw new Error("Sheet not found");
+  }
+  return sheet;
+}
+
+function safeCell(value) {
+  return /^[=+\-@]/.test(value) ? `'${value}` : value;
 }
 
 function jsonResponse(value) {
