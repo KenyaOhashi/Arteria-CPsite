@@ -16,8 +16,11 @@
     <link rel="stylesheet" href="assets/css/standalone-pulse-line.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/typography.css" />
+    <link rel="stylesheet" href="assets/css/site-content.css" />
     <script src="assets/js/standalone-mobile-menu.js" defer></script>
     <script src="assets/js/standalone-pulse-line.js" defer></script>
+    <script src="assets/js/site-content-config.js" defer></script>
+    <script src="assets/js/site-content.js" defer></script>
   </head>
   <body>
     <a class="skip" href="#main">本文へ移動</a>
@@ -87,11 +90,20 @@
       </section>
       <section class="block tint">
         <div class="shell">
-          <div class="empty">
-            <div>
-              <span>OPEN POSITIONS</span>
-              <h2>現在、募集中のポジションはありません。</h2>
-              <p>今後の募集情報は、準備が整い次第こちらに掲載します。</p>
+          <div
+            class="content-feed"
+            data-content-root
+            data-content-type="recruit"
+            aria-live="polite"
+          >
+            <div class="empty" data-content-fallback>
+              <div>
+                <span>OPEN POSITIONS</span>
+                <h2 data-content-fallback-title>現在、募集中のポジションはありません。</h2>
+                <p data-content-fallback-message>
+                  今後の募集情報は、準備が整い次第こちらに掲載します。
+                </p>
+              </div>
             </div>
           </div>
         </div>
