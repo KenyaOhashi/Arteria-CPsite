@@ -179,6 +179,7 @@ if (
   textLength($name) > 80 ||
   !filter_var($email, FILTER_VALIDATE_EMAIL) ||
   preg_match('/[\r\n]/', $email) ||
+  $phone === "" ||
   textLength($phone) > 30 ||
   textLength($organization) > 120 ||
   !in_array($category, $allowedCategories, true) ||

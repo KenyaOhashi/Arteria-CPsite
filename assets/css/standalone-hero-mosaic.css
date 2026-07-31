@@ -74,13 +74,34 @@
 }
 
 @media (max-width: 767px) {
-  .hero,
-  .hero-inner {
+  .hero {
     min-height: 900px;
   }
-  .hero-copy {
-    padding-bottom: 340px;
+
+  .hero-inner {
+    align-items: flex-start;
+    min-height: calc(900px - 76px);
   }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 680px;
+    padding-top: clamp(56px, 10vw, 76px);
+    padding-bottom: 360px;
+  }
+
+  .hero-copy .lead {
+    max-width: 36em;
+  }
+
+  .actions {
+    width: min(100%, 440px);
+  }
+
+  .actions .btn {
+    min-width: 0;
+  }
+
   .hero-collage {
     top: auto;
     right: 20px;
@@ -94,16 +115,41 @@
 }
 
 @media (max-width: 479px) {
-  .hero,
-  .hero-inner {
+  .hero {
     min-height: 920px;
   }
-  .hero-copy {
-    padding-bottom: 320px;
+
+  .hero-inner {
+    min-height: calc(920px - 76px);
   }
+
+  .hero-copy {
+    width: 100%;
+    padding-top: 52px;
+    padding-bottom: 300px;
+  }
+
+  .hero .hero-copy h1 {
+    font-size: clamp(2.25rem, 9.6vw, 3.25rem);
+    line-height: 1.28;
+  }
+
+  .hero-copy .lead {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+
+  .actions {
+    width: min(100%, 240px);
+  }
+
+  .actions .btn {
+    width: 100%;
+  }
+
   .hero-collage {
     right: 16px;
-    bottom: 48px;
+    bottom: 68px;
     left: 16px;
     width: calc(100% - 32px);
     height: 230px;

@@ -143,3 +143,10 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+.footer-group-link {
+  color: var(--deep);
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.25em;
+}

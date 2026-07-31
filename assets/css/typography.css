@@ -1,0 +1,185 @@
+/*
+ * Selected direction: Editorial Air spacing + Quiet Grid type scale.
+ * This file is loaded last so the same hierarchy is shared by every public page.
+ */
+
+:root {
+  --heading-letter-spacing: 0.025em;
+  --heading-weight: 500;
+}
+
+body {
+  letter-spacing: 0.006em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--heading-weight);
+  letter-spacing: var(--heading-letter-spacing);
+}
+
+h1 {
+  line-height: 1.42;
+}
+
+h2 {
+  line-height: 1.55;
+}
+
+h3 {
+  line-height: 1.6;
+}
+
+header nav {
+  letter-spacing: 0.1em;
+}
+
+nav a[aria-current="page"] {
+  font-weight: var(--heading-weight);
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: clamp(22px, 2vw, 30px);
+}
+
+.eyebrow::before {
+  width: 28px;
+  height: 1px;
+  flex: 0 0 auto;
+  background: currentcolor;
+  content: "";
+}
+
+.hero h1 {
+  max-width: 18em;
+  margin-bottom: clamp(32px, 3vw, 40px);
+  font-size: clamp(2.75rem, 3.4vw, 3.5rem);
+  line-height: 1.42;
+}
+
+.hero .lead,
+.hero-copy .lead {
+  max-width: 42rem;
+  font-size: clamp(1rem, 1.15vw, 1.0625rem);
+  line-height: 2;
+}
+
+.story h2,
+.mvv h2,
+.people-head h2,
+.section-title h2,
+.members-head h2,
+.contact-inner h2,
+.intro h2,
+.contact-intro h2,
+.message-intro h2,
+.cta-inner h2,
+.line-contact__copy h2,
+.block > .shell > h2 {
+  font-size: clamp(1.9rem, 2.7vw, 2.5rem);
+  line-height: 1.55;
+}
+
+.statements h3 {
+  font-size: clamp(1.65rem, 2.35vw, 2.25rem);
+  line-height: 1.55;
+}
+
+.service-copy h3 {
+  font-size: clamp(1.65rem, 2.1vw, 2.1rem);
+  line-height: 1.55;
+}
+
+.member-body h3,
+.pillars h3,
+.way-grid h3 {
+  font-weight: var(--heading-weight);
+}
+
+.message-philosophy strong,
+.message-closing {
+  font-weight: var(--heading-weight);
+}
+
+section.block,
+.mvv,
+.people,
+.members {
+  padding-block: clamp(100px, 9.5vw, 150px);
+}
+
+.story h2,
+.intro h2,
+.contact-intro h2,
+.message-intro h2,
+.line-contact__copy h2 {
+  margin-bottom: clamp(28px, 3vw, 38px);
+}
+
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: 0.02em;
+  }
+
+  .eyebrow {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .eyebrow::before {
+    width: 22px;
+  }
+
+  .hero h1 {
+    margin-bottom: 26px;
+    font-size: clamp(2rem, 9vw, 2.7rem);
+    line-height: 1.42;
+  }
+
+  .story h2,
+  .mvv h2,
+  .people-head h2,
+  .section-title h2,
+  .members-head h2,
+  .contact-inner h2,
+  .intro h2,
+  .contact-intro h2,
+  .message-intro h2,
+  .cta-inner h2,
+  .line-contact__copy h2,
+  .block > .shell > h2 {
+    font-size: clamp(1.7rem, 7.2vw, 2.15rem);
+    line-height: 1.55;
+  }
+
+  .statements h3,
+  .service-copy h3 {
+    font-size: clamp(1.4rem, 5.8vw, 1.8rem);
+  }
+
+  section.block,
+  .mvv,
+  .people,
+  .members {
+    padding-block: clamp(76px, 18vw, 96px);
+  }
+}
+
+@media (max-width: 479px) {
+  .hero .hero-copy h1 {
+    font-size: clamp(2rem, 9vw, 2.5rem);
+    line-height: 1.42;
+  }
+}
